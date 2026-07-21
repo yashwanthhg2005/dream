@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sri Lakshmi Devi Hardware - Product Details">
+    <title>Product Details | Sri Lakshmi Devi Hardware</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .product-detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .product-detail-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            max-height: 500px;
+        }
+
+        .product-info-box {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="home.html" class="logo">
+                <i class="fa-solid fa-building-columns"></i>
+                SLE <span>Enterprises</span>
+            </a>
+            <div class="mobile-toggle"><i class="fa-solid fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="businesses.html">Our Businesses</a></li>
+                <li><a href="hardware.html">Hardware</a></li>
+                <li><a href="home.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header"
+        style="background: linear-gradient(rgba(11,36,71,0.8), rgba(11,36,71,0.8)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2000&auto=format&fit=crop') center/cover; padding: 60px 0;">
+        <div class="container">
+            <h1 id="ph-brand-name">Product Details</h1>
+            <p>Sri Lakshmi Devi Hardware</p>
+        </div>
+    </div>
+
+    <!-- Product Details Section -->
+    <section class="section">
+        <div class="container">
+            <a href="hardware.html" class="btn btn-outline" style="margin-bottom: 20px;"><i
+                    class="fa-solid fa-arrow-left"></i> Back to Hardware</a>
+
+            <div class="product-detail-container" id="product-content" style="display: none;">
+                <div class="product-detail-img">
+                    <img id="p-img" src="" alt="Product Image">
+                </div>
+                <div class="product-detail-info">
+                    <h2 id="p-title" style="color: var(--primary-color); margin-bottom: 10px;">Brand Name</h2>
+                    <p id="p-desc" style="font-size: 1.1rem; color: #555; margin-bottom: 20px;">Product description goes
+                        here.</p>
+
+                    <h3 style="margin-bottom: 10px;">Advantages</h3>
+                    <ul id="p-adv" style="list-style-type: none; padding-left: 0; margin-bottom: 25px;">
+                        <!-- Advantages bullet points -->
+                    </ul>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+                        <div>
+                            <strong>Available Sizes/Types:</strong>
+                            <p id="p-sizes" style="color: #444; margin-top: 5px;"></p>
+                        </div>
+                        <div>
+                            <strong>Stock Availability:</strong>
+                            <p id="p-stock" style="color: green; font-weight: bold; margin-top: 5px;">In Stock</p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background-color: var(--primary-color); color: white; padding: 15px; border-radius: 5px; margin-bottom: 25px; display: inline-block;">
+                        <span style="font-size: 0.9rem; opacity: 0.8;">Price per unit</span><br>
+                        <span id="p-price"
+                            style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">₹0</span>
+                    </div>
+
+                    <div class="product-info-box">
+                        <h4 style="margin-bottom: 15px;">Supplier & Contact Info</h4>
+                        <p style="margin-bottom: 8px;"><i class="fa-solid fa-truck"
+                                style="color: var(--primary-color); width: 20px;"></i> <strong>Supplier:</strong> <span
+                                id="p-supplier">Sri Lakshmi Devi Hardware</span></p>
+                        <p style="margin-bottom: 8px;"><i class="fa-solid fa-location-dot"
+                                style="color: var(--primary-color); width: 20px;"></i> <strong>Business
+                                Address:</strong> <span id="p-address">56, Ring Road, Marathahalli, Bengaluru -
+                                560037</span></p>
+                        <p style="margin-bottom: 15px;"><i class="fa-solid fa-phone"
+                                style="color: var(--primary-color); width: 20px;"></i> <strong>Contact:</strong> <span
+                                id="p-contact">+91 88990 01122</span></p>
+                        <a href="home.html#contact" class="btn btn-primary">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product-error" style="display: none; text-align: center; padding: 50px;">
+                <h2>Product not found</h2>
+                <p>The requested product brand does not exist in our catalog.</p>
+                <a href="hardware.html" class="btn btn-primary" style="margin-top: 20px;">Return to Hardware Store</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Sri Lakshmi Devi Enterprises. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const brandId = urlParams.get('brand');
+
+            const productData = {
+                'sk-steel': {
+                    title: '<span style="color:red; font-weight:800;">SK</span> Super TMT Steel',
+                    headerTitle: 'SK Super TMT Steel',
+                    img: 'images/sk_super_tmt_logo.jpg',
+                    desc: 'High-grade construction TMT rebars known for ductility and superior yield strength. Ideal for multi-story foundations and heavy load-bearing structures.',
+                    advantages: [
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> High Earthquake Resistance (Seismic Zone Compliant)',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Superior Weldability & Bendability',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Rust Resistant coating options available'
+                    ],
+                    sizes: '8mm, 10mm, 12mm, 16mm, 20mm, 25mm',
+                    price: '₹65,000 / Metric Ton',
+                    stock: 'In Stock (Ready to dispatch)',
+                    supplier: 'SK Primary Steel Factory Outlet via SLE Hardware',
+                    address: 'Sri Lakshmi Devi Steels and Hardware, Basarallu Hobli, Mandya-Kunigal Highway, Mandya Taluk, HALLEGERE-571416',
+                    contact: '+91 9449118001, +91 9945576256 | Email: kumarhshardware@gmail.com'
+                },
+                'agni-steel': {
+                    title: '<span style="color:orange; font-weight:800;">Agni</span> 550 D TMT Bars',
+                    headerTitle: 'Agni 550 D TMT Bars',
+                    img: 'images/agni_tmt_logo.jpg',
+                    desc: 'Premium quality Fe550D TMT bars catering to heavy infrastructure projects. Renowned for longevity and raw material purity sourced directly from trusted mines.',
+                    advantages: [
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Excellent bonding with concrete',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> High thermal stability against fire hazards',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Uniform rib patterns for extra grip'
+                    ],
+                    sizes: '8mm to 32mm',
+                    price: '₹67,500 / Metric Ton',
+                    stock: 'In Stock (High Volume Available)',
+                    supplier: 'Agni Steels Ltd. Authorized Dealer - SLE',
+                    address: 'Sri Lakshmi Devi Steels and Hardware, Basarallu Hobli, Mandya-Kunigal Highway, Mandya Taluk, HALLEGERE-571416',
+                    contact: '+91 9449118001, +91 9945576256 | Email: kumarhshardware@gmail.com'
+                },
+                'apollo-pipes': {
+                    title: 'APOLLO Pipes',
+                    headerTitle: 'Apollo Pipes',
+                    img: 'images/apollo_pipes_logo.png',
+                    desc: 'Comprehensive range of plumbing, sanitation, and agricultural piping solutions. Designed with high precision, it ensures zero-leakage and unmatched durability over its lifespan.',
+                    advantages: [
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Available in UPVC & CPVC variants',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Lead-free and 100% safe for drinking water',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> UV stabilized for strong outdoor resistance'
+                    ],
+                    sizes: '½ inch to 6 inches diameter',
+                    price: 'Starts at ₹120 / Pipe (10ft)',
+                    stock: 'In Stock',
+                    supplier: 'Apollo Pipes Direct Distributor',
+                    address: 'Sri Lakshmi Devi Steels and Hardware, Basarallu Hobli, Mandya-Kunigal Highway, Mandya Taluk, HALLEGERE-571416',
+                    contact: '+91 9449118001, +91 9945576256 | Email: kumarhshardware@gmail.com'
+                },
+                'ramco-sheet': {
+                    title: 'Ramco Asbestos & Metal Sheets',
+                    headerTitle: 'Ramco Sheets',
+                    img: 'images/ramco_cement_sheet_logo.jpg',
+                    desc: 'Durable roofing solutions for warehouses, sawmills, and residential sheds. Crafted for toughness, they offer exceptional protection against severe Indian weather climates.',
+                    advantages: [
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> High fire resistant properties',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Corrosion-proof and rust-free (Metal variants)',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> High noise insulation during heavy rains (Asbestos)'
+                    ],
+                    sizes: '1m, 2m, 3m lengths (Standard W: 1.05m)',
+                    price: '₹450 / 3-Meter Asbestos Sheet',
+                    stock: 'In Stock',
+                    supplier: 'Ramco Industries - SLE Channel Partner',
+                    address: 'Sri Lakshmi Devi Steels and Hardware, Basarallu Hobli, Mandya-Kunigal Highway, Mandya Taluk, HALLEGERE-571416',
+                    contact: '+91 9449118001, +91 9945576256 | Email: kumarhshardware@gmail.com'
+                },
+                'ultratech': {
+                    title: 'UltraTech Cement',
+                    headerTitle: 'UltraTech Cement',
+                    img: 'images/ultratech_cement_logo.png',
+                    desc: 'The engineer\'s choice. Unbeatable quality Ordinary Portland Cement (OPC) and Portland Pozzolana Cement (PPC) for ultimate masonry and foundation strength.',
+                    advantages: [
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Advanced anti-dampness formulation',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Fast initial setting time',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Excellent crack resisting properties over time'
+                    ],
+                    sizes: 'OPC 53 Grade, Super / Premium (50kg Bags)',
+                    price: '₹380 / 50kg Bag',
+                    stock: 'In Stock (Freshly Arrived)',
+                    supplier: 'UltraTech Cement - Bulk Dealer (SLE)',
+                    address: 'Sri Lakshmi Devi Steels and Hardware, Basarallu Hobli, Mandya-Kunigal Highway, Mandya Taluk, HALLEGERE-571416',
+                    contact: '+91 9449118001, +91 9945576256 | Email: kumarhshardware@gmail.com'
+                },
+                'birla-opus': {
+                    title: 'Birla Opus Paints',
+                    headerTitle: 'Birla Opus Paints',
+                    img: 'images/birla_opus_logo.png',
+                    desc: 'Vibrant, long-lasting decorative paints for both interior and exterior aesthetics. Formulated with advanced color protection technology ensuring years of elegant finish.',
+                    advantages: [
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Excellent dust & water resistant (Exterior coatings)',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Highly washable, stain-free finish (Interior emulsions)',
+                        '<i class="fa-solid fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Over 1,200 tinting shades available on demand'
+                    ],
+                    sizes: '1 Litre, 4 Litre, 10 Litre, 20 Litre Buckets',
+                    price: 'Starts at ₹220 / Litre (Base)',
+                    stock: 'In Stock (Auto-tint machine available in store)',
+                    supplier: 'Birla Opus Exclusive Retailer - SLE',
+                    address: 'Sri Lakshmi Devi Steels and Hardware, Basarallu Hobli, Mandya-Kunigal Highway, Mandya Taluk, HALLEGERE-571416',
+                    contact: '+91 9449118001, +91 9945576256 | Email: kumarhshardware@gmail.com'
+                }
+            };
+
+            if (brandId && productData[brandId]) {
+                const data = productData[brandId];
+                document.getElementById('product-content').style.display = 'grid';
+
+                document.title = data.headerTitle + ' | Sri Lakshmi Devi Hardware';
+                document.getElementById('ph-brand-name').textContent = data.headerTitle;
+
+                document.getElementById('p-title').innerHTML = data.title;
+                document.getElementById('p-img').src = data.img;
+                document.getElementById('p-desc').textContent = data.desc;
+                document.getElementById('p-adv').innerHTML = data.advantages.join('');
+                document.getElementById('p-sizes').textContent = data.sizes;
+                document.getElementById('p-price').textContent = data.price;
+                document.getElementById('p-stock').textContent = data.stock;
+                document.getElementById('p-supplier').textContent = data.supplier;
+                document.getElementById('p-address').textContent = data.address;
+                document.getElementById('p-contact').textContent = data.contact;
+            } else {
+                document.getElementById('product-error').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

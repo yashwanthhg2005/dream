@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sri Lakshmi Devi Enterprises - Portal">
+    <title>Sri Lakshmi Devi Enterprises | Gateway</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #0b2447;
+            --accent-color: #fad32c;
+            --text-light: #ffffff;
+            --transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Initial View */
+        .gateway-intro {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(rgba(11, 36, 71, 0.85), rgba(11, 36, 71, 0.95)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover;
+            transition: var(--transition);
+            cursor: pointer;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gateway-intro.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.1);
+            pointer-events: none;
+        }
+
+        .gateway-intro h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            animation: slideDown 1s ease-out;
+        }
+
+        .gateway-intro h1 span {
+            color: var(--accent-color);
+        }
+
+        .gateway-intro p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #d1d5db;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .gateway-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .gateway-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(250, 211, 44, 0.3);
+            animation: none;
+        }
+
+        /* Streams Layout */
+        .streams-container {
+            flex-grow: 1;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .streams-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .streams-header {
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 20px;
+        }
+
+        .streams-header h2 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .streams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .stream-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stream-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .stream-img {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .stream-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .stream-card:hover .stream-img img {
+            transform: scale(1.1);
+        }
+
+        .stream-content {
+            padding: 30px 25px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stream-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .stream-content p {
+            color: #ccc;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .explore-link {
+            font-weight: 600;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .stream-card:hover .explore-link {
+            color: var(--accent-color);
+        }
+
+        .explore-link i {
+            transition: transform 0.3s;
+        }
+
+        .stream-card:hover .explore-link i {
+            transform: translateX(5px);
+        }
+
+        /* Skip to main site */
+        .bottom-nav {
+            text-align: center;
+            margin-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .bottom-nav a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 1rem;
+            border-bottom: 1px dashed #aaa;
+            padding-bottom: 2px;
+            transition: var(--transition);
+        }
+
+        .bottom-nav a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(250, 211, 44, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(250, 211, 44, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(250, 211, 44, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gateway-intro h1 {
+                font-size: 2.5rem;
+            }
+
+            .streams-header h2 {
+                font-size: 2rem;
+            }
+
+            .stream-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Intro Gateway -->
+    <div class="gateway-intro" id="intro-screen" onclick="openStreams()">
+        <h1>Sri Lakshmi Devi <span>Enterprises</span></h1>
+        <p>A diversified conglomerate delivering excellence</p>
+        <button class="gateway-btn">Click to Enter</button>
+    </div>
+
+    <!-- Streams Grid (Hidden Initially) -->
+    <div class="streams-container" id="streams-view">
+        <div class="streams-header">
+            <h2>Our Business Divisions</h2>
+            <p style="color: #ccc; max-width: 600px; margin: 0 auto;">Select a stream to explore our dedicated
+                facilities, services, and high-quality products.</p>
+        </div>
+
+        <div class="streams-grid">
+            <!-- Rice Mill -->
+            <a href="rice-mill.html" class="stream-card">
+                <div class="stream-img">
+                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e8ac?q=80&w=2070&auto=format&fit=crop"
+                        alt="Rice Mill">
+                </div>
+                <div class="stream-content">
+                    <div>
+                        <h3>Sri Lakshmi Devi Rice Mill</h3>
+                        <p>Premium paddy processing and sortex-cleaned quality rice production.</p>
+                    </div>
+                    <div class="explore-link">Explore Mill <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <!-- Hardware -->
+            <a href="hardware.html" class="stream-card">
+                <div class="stream-img">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop"
+                        alt="Hardware">
+                </div>
+                <div class="stream-content">
+                    <div>
+                        <h3>Sri Lakshmi Devi Hardware</h3>
+                        <p>Authorized dealers for top tier steel, cement, pipes, and paints.</p>
+                    </div>
+                    <div class="explore-link">Explore Hardware <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <!-- Saw Mill -->
+            <a href="saw-mill.html" class="stream-card">
+                <div class="stream-img">
+                    <img src="https://images.unsplash.com/photo-1416879572421-2e680a618e40?q=80&w=2072&auto=format&fit=crop"
+                        alt="Saw Mill">
+                </div>
+                <div class="stream-content">
+                    <div>
+                        <h3>Sri Lakshmi Saw Mill</h3>
+                        <p>Precision timber processing and custom wood cutting services.</p>
+                    </div>
+                    <div class="explore-link">Explore Saw Mill <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <!-- Agriculture Land -->
+            <a href="agriculture.html" class="stream-card">
+                <div class="stream-img">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=2071&auto=format&fit=crop"
+                        alt="Agriculture">
+                </div>
+                <div class="stream-content">
+                    <div>
+                        <h3>Agriculture Land</h3>
+                        <p>Fertile land leasing, contract farming, and cash crop cultivation.</p>
+                    </div>
+                    <div class="explore-link">Explore Agriculture <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="home.html">Or visit our Main Corporate Landing Page <i class="fa-solid fa-building"
+                    style="margin-left: 5px;"></i></a>
+        </div>
+    </div>
+
+    <script>
+        function openStreams() {
+            const intro = document.getElementById('intro-screen');
+
+            // Hide intro
+            intro.classList.add('hidden');
+
+            // Wait slightly for intro to fade, then redirect to businesses page
+            setTimeout(() => {
+                window.location.href = 'businesses.html';
+            }, 300);
+        }
+
+        // Add support for physical "Enter" key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                openStreams();
+            }
+        });
+    </script>
+</body>
+
+</html>

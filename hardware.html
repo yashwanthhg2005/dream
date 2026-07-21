@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sri Lakshmi Devi Steels and Hardware - Shop top brands of building materials">
+    <title>Sri Lakshmi Devi Steels and Hardware | SLE</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="home.html" class="logo">
+                <i class="fa-solid fa-building-columns"></i>
+                SLE <span>Enterprises</span>
+            </a>
+
+            <div class="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="businesses.html">Our Businesses</a></li>
+                <li><a href="home.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header"
+        style="background: linear-gradient(rgba(11,36,71,0.8), rgba(11,36,71,0.8)), url('images/hardware_new_store.jpg') center/cover;">
+        <div class="container">
+            <h1>Sri Lakshmi Devi Steels and Hardware</h1>
+            <p>Authorized Dealers for Premium Construction Materials & Paints at Hallegere</p>
+        </div>
+    </div>
+
+    <!-- Hardware Overview -->
+    <section class="section" style="padding-bottom: 20px;">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto; margin-bottom: 40px;">
+                <p style="font-size: 1.1rem; color: #555;">We provide civil contractors, builders, and direct customers
+                    with authentic, high-grade hardware materials. Explore our authorized brand catalogs below.</p>
+            </div>
+
+            <!-- Business Contact Section at Top -->
+            <div class="contact-form"
+                style="margin-bottom: 60px; background-color: var(--primary-color); color: white; padding: 30px; border-radius: 8px;">
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 10px;">Sri Lakshmi Devi Steels and Hardware
+                        Enquiry</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Sri Lakshmi Devi Steels and Hardware, Hallegere,
+                        Basarallu Hobli, Mandya-Kunigal Highway, Mandya Taluk, HALLEGERE-571416 <br>
+                        <i class="fa-solid fa-phone"></i> +91 9449118001, +91 9945576256 &nbsp; | &nbsp; <i
+                            class="fa-solid fa-envelope"></i> kumarhshardware@gmail.com
+                    </p>
+                    <p style="font-size: 0.9em; margin-top: 10px;">Send an inquiry directly to the Hardware branch for
+                        bulk orders or material availability.</p>
+                </div>
+                <form class="branch-enquiry-form" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <input type="hidden" name="branch" value="Hardware">
+                    <input type="text" id="name" class="form-control" placeholder="Name" required
+                        style="flex: 1; padding: 10px; min-width: 200px;">
+                    <input type="text" id="contact_info" class="form-control" placeholder="Email/Phone" required
+                        style="flex: 1; padding: 10px; min-width: 200px;">
+                    <input type="text" id="message" class="form-control" placeholder="Material requirements..." required
+                        style="flex: 2; padding: 10px; min-width: 300px;">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Submit Enquiry</button>
+                </form>
+            </div>
+
+            <h2 class="section-title">Our Premium Product Range</h2>
+
+            <div class="grid-cards" style="grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));">
+
+                <!-- SK Steel -->
+                <div class="card" id="sk-steel">
+                    <div class="card-img" style="height: 250px;">
+                        <img src="images/sk_super_tmt_logo.jpg" alt="SK Super TMT Steel"
+                            style="object-fit: contain; background: #fff;">
+                    </div>
+                    <div class="card-content">
+                        <h3><span style="color:red; font-weight:800;">SK</span> Super TMT Steel</h3>
+                        <p>High-grade construction TMT rebars known for ductility and superior yield strength. Ideal for
+                            multi-story foundations.</p>
+                        <ul class="card-features">
+                            <li>High Earthquake Resistance</li>
+                            <li>Superior Weldability</li>
+                            <li>Rust Resistant coating options</li>
+                        </ul>
+                        <p style="margin-bottom: 5px;"><strong>Available Sizes:</strong> 8mm, 10mm, 12mm, 16mm, 20mm</p>
+                        <p style="margin-bottom: 5px;"><strong>Availability:</strong> <span
+                                style="color: green; font-weight: bold;">In Stock</span></p>
+                        <p class="card-price">₹65,000 / Metric Ton</p>
+                        <a href="hardware-product.html?brand=sk-steel" class="btn btn-outline btn-block mt-3">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <!-- Agni Steel -->
+                <div class="card" id="agni-steel">
+                    <div class="card-img" style="height: 250px;">
+                        <img src="images/agni_tmt_logo.jpg" alt="Agni TMT Steel"
+                            style="object-fit: contain; background: #fff;">
+                    </div>
+                    <div class="card-content">
+                        <h3><span style="color:orange; font-weight:800;">Agni</span> 550 D TMT Bars</h3>
+                        <p>Premium quality Fe550D TMT bars catering to heavy infrastructure projects. Renowned for
+                            longevity and raw material purity.</p>
+                        <ul class="card-features">
+                            <li>Excellent bonding with concrete</li>
+                            <li>High thermal stability</li>
+                            <li>Uniform rib patterns</li>
+                        </ul>
+                        <p style="margin-bottom: 5px;"><strong>Available Sizes:</strong> 8mm to 32mm</p>
+                        <p style="margin-bottom: 5px;"><strong>Availability:</strong> <span
+                                style="color: green; font-weight: bold;">In Stock</span></p>
+                        <p class="card-price">₹67,500 / Metric Ton</p>
+                        <a href="hardware-product.html?brand=agni-steel" class="btn btn-outline btn-block mt-3">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <!-- Apollo Pipes -->
+                <div class="card" id="apollo-pipes">
+                    <div class="card-img" style="height: 250px;">
+                        <img src="images/apollo_pipes_logo.png" alt="APOLLO Pipes"
+                            style="object-fit: contain; background: #fff;">
+                    </div>
+                    <div class="card-content">
+                        <h3>APOLLO Pipes</h3>
+                        <p>Comprehensive range of plumbing, sanitation, and agricultural piping solutions. Ensures
+                            zero-leakage and long life span.</p>
+                        <ul class="card-features">
+                            <li>UPVC & CPVC variants</li>
+                            <li>Lead-free and safe for drinking water</li>
+                            <li>UV stabilized for outdoor use</li>
+                        </ul>
+                        <p style="margin-bottom: 5px;"><strong>Available Types:</strong> SWR, Agri, CPVC Plumbing</p>
+                        <p style="margin-bottom: 5px;"><strong>Availability:</strong> <span
+                                style="color: green; font-weight: bold;">In Stock</span></p>
+                        <p class="card-price">Starts at ₹120 / Pipe (10ft)</p>
+                        <a href="hardware-product.html?brand=apollo-pipes" class="btn btn-outline btn-block mt-3">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <!-- Ramco Sheet -->
+                <div class="card" id="ramco-sheet">
+                    <div class="card-img" style="height: 250px;">
+                        <img src="images/ramco_cement_sheet_logo.jpg" alt="Ramco Asbestos Sheets"
+                            style="object-fit: contain; background: #fff;">
+                    </div>
+                    <div class="card-content">
+                        <h3>Ramco Asbestos & Metal Sheets</h3>
+                        <p>Durable roofing solutions for warehouses, sawmills, and residential sheds. Protects against
+                            severe weather climates.</p>
+                        <ul class="card-features">
+                            <li>Fire resistant properties</li>
+                            <li>Corrosion-proof (Metal variants)</li>
+                            <li>High noise insulation (Asbestos)</li>
+                        </ul>
+                        <p style="margin-bottom: 5px;"><strong>Available Sizes:</strong> 1m, 2m, 3m lengths</p>
+                        <p style="margin-bottom: 5px;"><strong>Availability:</strong> <span
+                                style="color: green; font-weight: bold;">In Stock</span></p>
+                        <p class="card-price">₹450 / 3-Meter Asbestos Sheet</p>
+                        <a href="hardware-product.html?brand=ramco-sheet" class="btn btn-outline btn-block mt-3">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <!-- Ultratech Cement -->
+                <div class="card" id="ultratech">
+                    <div class="card-img" style="height: 250px;">
+                        <img src="images/ultratech_cement_logo.png" alt="UltraTech Cement"
+                            style="object-fit: contain; background: #fff;">
+                    </div>
+                    <div class="card-content">
+                        <h3>UltraTech Cement</h3>
+                        <p>The engineer's choice. Ordinary Portland Cement (OPC) and Portland Pozzolana Cement (PPC) for
+                            ultimate masonry and foundation strength.</p>
+                        <ul class="card-features">
+                            <li>Anti-dampness formulation</li>
+                            <li>Fast setting time</li>
+                            <li>Crack resisting properties</li>
+                        </ul>
+                        <p style="margin-bottom: 5px;"><strong>Available Types:</strong> OPC 53 Grade, Super / Premium
+                        </p>
+                        <p style="margin-bottom: 5px;"><strong>Availability:</strong> <span
+                                style="color: green; font-weight: bold;">In Stock</span></p>
+                        <p class="card-price">₹380 / 50kg Bag</p>
+                        <a href="hardware-product.html?brand=ultratech" class="btn btn-outline btn-block mt-3">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <div class="card" id="birla-opus">
+                    <div class="card-img" style="height: 250px;">
+                        <img src="images/birla_opus_logo.png" alt="Birla Opus Paints"
+                            style="object-fit: contain; background: #fff;">
+                    </div>
+                    <div class="card-content">
+                        <h3>Birla Opus Paints</h3>
+                        <p>Vibrant, long-lasting decorative paints for interior and exterior aesthetics. Formulated with
+                            advanced color protection technology.</p>
+                        <ul class="card-features">
+                            <li>Dust & water resistant (Exterior)</li>
+                            <li>Washable stain-free finish (Interior)</li>
+                            <li>Over 1,200 tinting shades available</li>
+                        </ul>
+                        <p style="margin-bottom: 5px;"><strong>Available Types:</strong> Enamel, Emulsion, Primer</p>
+                        <p style="margin-bottom: 5px;"><strong>Availability:</strong> <span
+                                style="color: green; font-weight: bold;">In Stock (Auto-tint machine available)</span>
+                        </p>
+                        <p class="card-price">Starts at ₹220 / Litre</p>
+                        <a href="hardware-product.html?brand=birla-opus" class="btn btn-outline btn-block mt-3">View
+                            Details</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="section-title" style="margin-top: 60px;">Store Location</h2>
+            <div
+                style="border-radius: 8px; overflow: hidden; margin-bottom: 30px; height: 350px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15582.497491702484!2d76.8833!3d12.5222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDMxJzIwLjAiTiA3NsKwNTMnMDAuMCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin&q=Hallegere+Mandya"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 60px;">Store Gallery</h2>
+            <div class="grid-cards" style="grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 40px;">
+                <img src="images/hardware_multi_store.jpg" alt="Store Open Front"
+                    style="height: 250px; width: 100%; object-fit: cover; border-radius: 4px;">
+                <img src="images/hardware_counter_staff.jpg" alt="Staff at Counter"
+                    style="height: 250px; width: 100%; object-fit: cover; border-radius: 4px;">
+                <img src="images/hardware_new_store.jpg" alt="Pipes and Material Racks"
+                    style="height: 250px; width: 100%; object-fit: cover; border-radius: 4px;">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Sri Lakshmi Devi Enterprises. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

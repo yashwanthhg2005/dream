@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Sri Lakshmi Devi Enterprises - Covering Rice Mill, Saw Mill, Hardware, and Agriculture Land">
+  <title>Sri Lakshmi Devi Enterprises | Home</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container navbar">
+      <a href="home.html" class="logo">
+        <i class="fa-solid fa-building-columns"></i>
+        SLE <span>Enterprises</span>
+      </a>
+
+      <div class="mobile-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="businesses.html">Our Businesses</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <h1>Sri Lakshmi Devi <span>Enterprises</span></h1>
+      <p>A trusted name in Rice Milling, Saw Milling, Building Hardware, and Agricultural Land Management. Quality and
+        commitment in every endeavor.</p>
+      <div class="hero-btns">
+        <a href="businesses.html" class="btn btn-primary">Explore Our Businesses</a>
+        <a href="#contact" class="btn btn-outline" style="color: #fff; border-color: #fff;">Contact Us</a>
+      </div>
+    </div>
+    <!-- Smooth scroll button -->
+    <a href="#about" class="scroll-down"
+      style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 2rem; animation: bounce 2s infinite;">
+      <i class="fa-solid fa-circle-chevron-down"></i>
+    </a>
+    <style>
+      @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0) translateX(-50%);
+        }
+
+        40% {
+          transform: translateY(-30px) translateX(-50%);
+        }
+
+        60% {
+          transform: translateY(-15px) translateX(-50%);
+        }
+      }
+    </style>
+  </section>
+
+  <!-- About Us -->
+  <section class="section reveal" id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=2070&auto=format&fit=crop"
+            alt="Sri Lakshmi Devi Enterprises Office">
+        </div>
+        <div class="about-content">
+          <h3>Legacy of Trust & Quality</h3>
+          <p>Sri Lakshmi Devi Enterprises has been a pioneer in delivering top-notch services across multiple sectors.
+            From processing premium quality rice to providing high-grade timber, supplying essential building materials,
+            and cultivating fertile agricultural lands.</p>
+          <p>We believe in sustainable growth, customer satisfaction, and building long-lasting relationships with our
+            clients and stakeholders. Our multifaceted business approach ensures that we meet the diverse needs of our
+            community efficiently.</p>
+          <ul style="margin-top: 20px;">
+            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                style="color: var(--accent-color); margin-right: 10px;"></i> Premium Quality Assurance</li>
+            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                style="color: var(--accent-color); margin-right: 10px;"></i> Decades of Business Excellence</li>
+            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"
+                style="color: var(--accent-color); margin-right: 10px;"></i> Diverse Portfolio Setup</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Businesses Snippet -->
+  <section class="section bg-secondary reveal" id="businesses-preview">
+    <div class="container">
+      <h2 class="section-title" style="color: var(--accent-color);">Our Core Businesses</h2>
+      <p class="text-center" style="margin-bottom: 40px; max-width: 700px; margin-inline: auto;">Discover the range of
+        industries we operate in, delivering exceptional value and quality products to our customers.</p>
+
+      <div class="grid-cards">
+        <a href="rice-mill.html" class="card">
+          <div class="card-img"><img src="images/rice_mill_profile.jpg" alt="Rice Mill"></div>
+          <div class="card-content">
+            <h3>Sri Lakshmi Devi Rice Mill</h3>
+            <p>Processing premium quality grains using advanced milling technology. Learn more about our milling
+              capacity and services.</p>
+            <span class="btn btn-outline btn-block mt-3">View Details</span>
+          </div>
+        </a>
+        <a href="saw-mill.html" class="card">
+          <div class="card-img"><img src="images/saw_mill_wood_bg.png" alt="Saw Mill"></div>
+          <div class="card-content">
+            <h3>Sri Lakshmi Devi Saw Mill</h3>
+            <p>Premium timber processing and wood cutting services for furniture and construction needs.</p>
+            <span class="btn btn-outline btn-block mt-3">View Details</span>
+          </div>
+        </a>
+        <a href="hardware.html" class="card">
+          <div class="card-img"><img src="images/hardware_new_store.jpg" alt="Steels and Hardware"></div>
+          <div class="card-content">
+            <h3>Sri Lakshmi Devi Steels and Hardware</h3>
+            <p>Your one-stop shop for construction materials: Steel, Pipes, Cement, Paints & more.</p>
+            <span class="btn btn-outline btn-block mt-3">View Details</span>
+          </div>
+        </a>
+        <a href="agriculture.html" class="card">
+          <div class="card-img"><img
+              src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=2071&auto=format&fit=crop"
+              alt="Agriculture Land"></div>
+          <div class="card-content">
+            <h3>Agriculture Land</h3>
+            <p>Managing fertile agricultural grounds cultivating a variety of cash crops and providing leasing options.
+            </p>
+            <span class="btn btn-outline btn-block mt-3">View Details</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center" style="margin-top: 50px;">
+        <a href="businesses.html" class="btn btn-primary">See All Businesses Directory</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section class="section reveal" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info sidebar-widget">
+          <h3 style="border-bottom:none;">Get in Touch</h3>
+          <p style="margin-bottom: 30px; color: #555;">We'd love to hear from you. Whether you have an inquiry about our
+            services or need to place a bulk order, our team is ready to assist you.</p>
+
+          <ul class="contact-info-list" style="margin-bottom: 20px;">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Head Office:</strong>
+                <p>123 Industrial Area, Phase 1, Bengaluru, Karnataka 560001</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone:</strong>
+                <p>+91 98765 43210 <br> +91 80 1234 5678</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <p>info@sle-enterprises.com <br> sales@sle-enterprises.com</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" class="form-control" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject / Interested In</label>
+              <select id="subject" class="form-control" required style="appearance: auto;">
+                <option value="">Select a Business</option>
+                <option value="Rice Mill">Rice Mill Inquiry</option>
+                <option value="Saw Mill">Saw Mill Inquiry</option>
+                <option value="Hardware">Hardware Supplies</option>
+                <option value="Agriculture">Agriculture Land</option>
+                <option value="General">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" rows="4" class="form-control" required
+                placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>SLE <span>Enterprises</span></h3>
+          <p>Sri Lakshmi Devi Enterprises is a diversified conglomerate serving the needs of our community through
+            agriculture, milling, and construction materials.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col" style="padding-left: 20px;">
+          <h3 style="color:white;"><span style="color:white;">Quick Links</span></h3>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="businesses.html">Our Businesses</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 style="color:white;"><span style="color:white;">Our Divisions</span></h3>
+          <ul class="footer-links">
+            <li><a href="rice-mill.html">Sri Lakshmi Devi Rice Mill</a></li>
+            <li><a href="saw-mill.html">Sri Lakshmi Devi Saw Mill</a></li>
+            <li><a href="hardware.html">Sri Lakshmi Devi Steels and Hardware</a></li>
+            <li><a href="agriculture.html">Agriculture Land</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sri Lakshmi Devi Enterprises. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
